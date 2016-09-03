@@ -115,8 +115,10 @@ window.Dashboard = (function() {
 		init: function() {
 
 			
-			var width = document.body.clientWidth;
-			var sum_width = document.body.clientWidth > 640 ? 640 : document.body.clientWidth;
+			// var width = document.body.clientWidth;
+			var width = $(".dash").width();
+			// var sum_width = document.body.clientWidth > 640 ? 640 : document.body.clientWidth;
+			var sum_width = width> 640 ? 640 : width;
 		//	var sum_width = $(document).width() ;
 			this.radio = sum_width / 414;
 			var radius = width / 2 - PADDING_SIDE * this.radio;
